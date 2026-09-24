@@ -1,0 +1,77 @@
+# ===========================================================================
+#  .gitignore  -  API Model Tester
+#  只忽略「运行时产物 / 日志 / 凭据 / 临时文件」；
+#  源码（*.ps1）、lib/、tests/、assets/、README.md、Launch.* 、uninstall.ps1 全部照常提交。
+# ===========================================================================
+
+# ---- 日志 ----
+*.log
+logs/
+launch.log
+startup.log
+error.log
+
+# ---- 导出结果 ----
+*.csv
+*.tsv
+*.xlsx
+api-model-test-*.csv
+report*.txt
+*-report.txt
+
+# ---- 配置（可能包含 baseUrl，绝不入库）----
+settings.json
+*.settings.json
+config.local.*
+*.local.json
+
+# ---- 本工具运行时产物 ----
+# MiniMock 启动时写出的地址与请求日志
+tests/minimock.url
+tests/minimock.requests.txt
+# 图标构建报告
+assets/_icon-build.txt
+# 自检输出
+tests/_selftest*
+*.selftest.json
+
+# ---- 临时 / 备份 ----
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*~
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+desktop.ini
+.DS_Store
+
+# ---- 凭据类（双保险，永不入库）----
+*.pem
+*.key
+*.pfx
+*.p12
+.env
+.env.*
+secrets.*
+credentials.*
+*.token
+
+# ---- 编辑器 / IDE ----
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# ---- 运行时缓存 ----
+.cache/
+.cache-*/
+__pycache__/
+node_modules/
